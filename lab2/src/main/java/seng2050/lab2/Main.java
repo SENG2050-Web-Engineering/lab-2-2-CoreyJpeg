@@ -36,6 +36,10 @@ public class Main {
     tomcat.addServlet("", "SimpleMessage", new SimpleMessage());
     ctx.addServletMappingDecoded("/SimpleMessage", "SimpleMessage");
 
+    // Add and Map the Servlet
+    tomcat.addServlet("", "generateValidHTML", new generateValidHTML());
+    ctx.addServletMappingDecoded("/GetTrolled", "generateValidHTML");
+
     // Add a servlet
     tomcat.addServlet("", "HelloWorldServlet", new HelloWorldServlet());
 
